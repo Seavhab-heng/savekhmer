@@ -6,7 +6,8 @@
       "properties": {
         "region": "RCAF Northern Region",
         "country": "Cambodia",
-        "description": "Covers Preah Vihear, Oddar Meanchey, and An Ses conflict zones."
+        "description": "Covers Preah Vihear, Oddar Meanchey, and An Ses conflict zones.",
+        "mask": true
       },
       "geometry": {
         "type": "Polygon",
@@ -22,7 +23,8 @@
       "properties": {
         "region": "Thai Second Army Region",
         "country": "Thailand",
-        "description": "Covers Surin, Sisaket, Ubon Ratchathani, and border conflict areas."
+        "description": "Covers Surin, Sisaket, Ubon Ratchathani, and border conflict areas.",
+        "mask": true
       },
       "geometry": {
         "type": "Polygon",
