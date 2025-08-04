@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cambodia Conflict Map: Civilian Hardships</title>
+  <title>Interactive Map</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
@@ -14,21 +14,19 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="map.html">Map</a></li>
         <li><a href="media.html">Media & Supporters</a></li>
-        <li><a href="weapons.html">Weapons</a></li>
         <li><a href="donate.html">Donate</a></li>
       </ul>
     </nav>
   </header>
   <main>
     <section id="map-section">
-      <h1>Civilian Hardships: Displacement and Damage by Province</h1>
-      <p>Data as of July 30, 2025, 17:45 (Cambodia Official Reports)</p>
-      <div id="map"></div>
+      <h1>Cambodia Conflict Map</h1>
+      <div id="map" style="height: 500px;"></div>
       <div id="province-info"></div>
     </section>
   </main>
   <footer>
-    <p>&copy; 2025 Cambodia-Thailand Conflict Documentary</p>
+    <p>&copy; 2025 Thailand-Cambodia Conflict Documentary</p>
   </footer>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
@@ -38,62 +36,37 @@
       attribution: '&copy; OpenStreetMap contributors'
     }).addTo(map);
 
-    fetch('assets/data/province-metrics.json')
-      .then(response => response.json())
-      .then(data => {
-        const provinces = data.provinces;
+    // Sample province data (replace with real GeoJSON)
+    const provinceData = {
+      "Oddar Meanchey": {
+        coords: [14.1812, 103.5176],
+        media: ["Image: Clash at Ta Moan Thom", "Article: NYT Report"],
+        intensity: 0.8
+      },
+      "Surin": {
+        coords: [14.8818, 103.4936],
+        media: ["Video: Shelling Footage", "Article: BBC Verify"],
+        intensity: 0.6
+      }
+    };
 
-        // Heatmap scaled to displacement
-        const maxDisplaced = Math.max(...provinces.map(p => p.metrics.displaced));
-        const heatPoints = provinces.map(p => [
-          p.coords[0], p.coords[1], p.metrics.displaced / maxDisplaced
-        ]);
-        L.heatLayer(heatPoints, { radius: 25, blur: 15, maxZoom: 17 }).addTo(map);
+    // Heatmap
+    const heatPoints = Object.entries(provinceData).map(([name, data]) => [
+      data.coords[0], data.coords[1], data.intensity
+    ]);
+    L.heatLayer(heatPoints, { radius: 25 }).addTo(map);
 
-        // Province click and hover events
-        provinces.forEach(province => {
-          const marker = L.marker(province.coords).addTo(map)
-            .bindPopup(`
-              <b>${province.name}</b><br>
-              Displaced: ${province.metrics.displaced.toLocaleString()} people<br>
-              Civilians Killed: ${province.metrics.civilians_killed.toLocaleString()}<br>
-              Military Killed: ${province.metrics.military_killed.toLocaleString()}<br>
-              Civilian Houses: ${province.metrics.civilian_houses.toLocaleString()}<br>
-              Commercial Buildings: ${province.metrics.commercial_buildings.toLocaleString()}<br>
-              Hospitals: ${province.metrics.hospitals.toLocaleString()}<br>
-              Temples/Pagodas: ${province.metrics.temples_pagodas.toLocaleString()}<br>
-              Military Barracks: ${province.metrics.military_barracks.toLocaleString()}<br>
-              Schools: ${province.metrics.schools.toLocaleString()}<br>
-              <b>Media:</b><br>${province.media.join('<br>')}
-            `);
-          marker.on('click', () => {
-            const infoDiv = document.getElementById('province-info');
-            infoDiv.innerHTML = `
-              <h2>${province.name}</h2>
-              <ul class="metrics-list">
-                <li><strong>Displaced:</strong> ${province.metrics.displaced.toLocaleString()} people</li>
-                <li><strong>Civilians Killed:</strong> ${province.metrics.civilians_killed.toLocaleString()}</li>
-                <li><strong>Military Killed:</strong> ${province.metrics.military_killed.toLocaleString()}</li>
-                <li><strong>Civilian Houses:</strong> ${province.metrics.civilian_houses.toLocaleString()}</li>
-                <li><strong>Commercial Buildings:</strong> ${province.metrics.commercial_buildings.toLocaleString()}</li>
-                <li><strong>Hospitals:</strong> ${province.metrics.hospitals.toLocaleString()}</li>
-                <li><strong>Temples/Pagodas:</strong> ${province.metrics.temples_pagodas.toLocaleString()}</li>
-                <li><strong>Military Barracks:</strong> ${province.metrics.military_barracks.toLocaleString()}</li>
-                <li><strong>Schools:</strong> ${province.metrics.schools.toLocaleString()}</li>
-              </ul>
-              <h3>Media</h3>
-              <ul>${province.media.map(m => `<li>${m}</li>`).join('')}</ul>
-            `;
-            infoDiv.classList.add('active');
-          });
-          marker.on('mouseover', () => {
-            marker.openPopup();
-          });
-          marker.on('mouseout', () => {
-            marker.closePopup();
-          });
+    // Province click events
+    Object.entries(provinceData).forEach(([name, data]) => {
+      L.marker(data.coords).addTo(map)
+        .bindPopup(`<b>${name}</b><br>${data.media.join('<br>')}`)
+        .on('click', () => {
+          document.getElementById('province-info').innerHTML = `
+            <h2>${name}</h2>
+            <ul>${data.media.map(m => `<li>${m}</li>`).join('')}</ul>
+          `;
         });
-      });
+    });
   </script>
 </body>
 </html>
