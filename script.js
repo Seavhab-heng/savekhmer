@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Current Date and Time
     const currentTime = document.getElementById('current-time');
-    currentTime.textContent = `07:10 +08, 8/5/2025`; // Hardcoded to match system time
+    currentTime.textContent = `07:14 +08, 8/5/2025`; // Updated to match system time
 
     // Heatmap Layer
     let heatLayer;
