@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Interactive map of 2025 Cambodia-Thailand border conflict with heatmap, event markers, and military region overlay.">
+  <meta name="description" content="Interactive map of 2025 Cambodia-Thailand border conflict with heatmap and event markers.">
   <title>Map | Cambodia-Thailand Border Conflict 2025</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="assets/icons/favicon.ico">
@@ -29,7 +29,7 @@
   <main>
     <section id="map-section" aria-labelledby="map-heading">
       <h1 id="map-heading">Conflict Map: Cambodia-Thailand Border (2025)</h1>
-      <p>Interactive map showing conflict zones and events, with heatmap indicating intensity and military region overlay. Last updated: <span id="current-time"></span></p>
+      <p>Interactive map showing conflict zones and events, with heatmap indicating intensity. Last updated: <span id="current-time"></span></p>
       <div id="filter-menu" class="filter-menu" role="menu">
         <button role="menuitem" data-filter="all" class="active">All Events</button>
         <button role="menuitem" data-filter="2025-05-28">May 28, 2025</button>
@@ -38,7 +38,6 @@
         <button role="menuitem" data-filter="2025-07-29">July 29, 2025</button>
         <button role="menuitem" data-filter="2025-08-04">August 4, 2025</button>
       </div>
-      <button id="overlay-toggle" aria-label="Toggle military region overlay">Show Military Regions</button>
       <div id="map" aria-label="Interactive conflict map"></div>
       <div id="province-info" class="bento-grid"></div>
     </section>
