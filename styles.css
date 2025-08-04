@@ -39,17 +39,17 @@ main {
   margin: 0 auto;
 }
 
-#timeline, #weapons {
+#timeline, #weapons, #war-crimes {
   text-align: center;
 }
 
-#timeline-content, #thai-weapons, #cambodian-weapons {
+#timeline-content, #thai-weapons, #cambodian-weapons, #war-crimes-accusations, #war-crimes-events, #war-crimes-calls {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.timeline-item, .weapon-item {
+.timeline-item, .weapon-item, .accusation-item, .event-item, .call-item {
   background: white;
   padding: 1rem;
   border-radius: 5px;
@@ -66,12 +66,12 @@ main {
   }
 }
 
-.weapon-item h3 {
+.weapon-item h3, .accusation-item h3, .call-item h3 {
   color: #2c3e50;
   margin-bottom: 0.5rem;
 }
 
-.weapon-item p {
+.weapon-item p, .accusation-item p, .event-item p, .call-item p {
   margin-bottom: 1rem;
 }
 
@@ -85,12 +85,12 @@ main {
   transform: scale(1.05);
 }
 
-.weapon-item ul {
+.weapon-item ul, .accusation-item ul, .event-item ul {
   list-style: none;
   padding: 0;
 }
 
-.weapon-item ul li {
+.weapon-item ul li, .accusation-item ul li, .event-item ul li {
   margin-bottom: 0.5rem;
   font-size: 0.9rem;
 }
