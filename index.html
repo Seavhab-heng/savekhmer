@@ -3,27 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Documenting the 2025 Cambodia-Thailand border conflict with timeline, evidence, and humanitarian impact.">
   <title>Cambodia-Thailand Border Conflict 2025</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="assets/icons/favicon.ico">
 </head>
 <body>
   <header>
-    <nav>
+    <nav aria-label="Main navigation">
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" aria-current="page">Home</a></li>
         <li><a href="map.html">Map</a></li>
         <li><a href="media.html">Media & Supporters</a></li>
         <li><a href="weapons.html">Weapons</a></li>
         <li><a href="war-criminal.html">War Crimes</a></li>
         <li><a href="donate.html">Donate</a></li>
       </ul>
+      <button id="dark-mode-toggle" aria-label="Toggle dark mode">
+        <img src="assets/icons/dark-mode-toggle.svg" alt="Dark mode toggle">
+      </button>
     </nav>
   </header>
   <main>
-    <section id="timeline">
-      <h1>Cambodia-Thailand Border Conflict Timeline (2025)</h1>
+    <section id="timeline" aria-labelledby="timeline-heading">
+      <h1 id="timeline-heading">Cambodia-Thailand Border Conflict Timeline (2025)</h1>
       <p>Based on Cambodia's Ministry of National Defence and Official Reports</p>
-      <div id="timeline-content"></div>
+      <div id="timeline-content" class="bento-grid"></div>
     </section>
   </main>
   <footer>
