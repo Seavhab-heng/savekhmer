@@ -76,8 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Current Date and Time
     const currentTime = document.getElementById('current-time');
-    const now = new Date();
-    currentTime.textContent = `06:21 +08, 8/5/2025`; // Hardcoded to match system time
+    currentTime.textContent = `06:35 +08, 8/5/2025`; // Hardcoded to match system time
 
     // Heatmap Layer
     let heatLayer;
@@ -85,7 +84,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let militaryOverlay;
 
     fetch('assets/data/province-metrics.json')
-      .then(response => response.json())
+      .then(response => {
+        if (!response.ok) throw new Error('Failed to fetch province metrics');
+        return response.json();
+      })
       .then(data => {
         const provinceInfo = document.getElementById('province-info');
         const filterButtons = document.querySelectorAll('#filter-menu button');
@@ -96,7 +98,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Load Military Regions Overlay
         fetch('assets/data/military-regions.geojson')
-          .then(response => response.json())
+          .then(response => {
+            if (!response.ok) throw new Error('Failed to fetch military regions');
+            return response.json();
+          })
           .then(geojson => {
             militaryOverlay = L.geoJSON(geojson, {
               style: function (feature) {
@@ -129,7 +134,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 overlayToggle.textContent = 'Hide Military Regions';
               }
             });
-          }).catch(error => console.error('Error loading military regions:', error));
+          })
+          .catch(error => console.error('Error loading military regions overlay:', error));
 
         // Filter functionality
         filterButtons.forEach(button => {
@@ -195,6 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
           });
         }
-      }).catch(error => console.error('Error loading province metrics:', error));
+      })
+      .catch(error => console.error('Error loading province metrics:', error));
   }
 });
