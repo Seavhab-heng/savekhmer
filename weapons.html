@@ -3,73 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weapons in Cambodia-Thailand Border Conflict</title>
+  <meta name="description" content="Weapons used in the 2025 Cambodia-Thailand border conflict, categorized for clarity.">
+  <title>Weapons | Cambodia-Thailand Border Conflict 2025</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="assets/icons/favicon.ico">
 </head>
 <body>
   <header>
-    <nav>
+    <button id="menu-toggle" aria-label="Toggle menu" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav aria-label="Main navigation" id="main-nav">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="map.html">Map</a></li>
-        <li><a href="media.html">Media & Supporters</a></li>
-        <li><a href="weapons.html">Weapons</a></li>
+        <li><a href="weapons.html" aria-current="page">Weapons</a></li>
+        <li><a href="war-criminal.html">War Crimes</a></li>
         <li><a href="donate.html">Donate</a></li>
       </ul>
     </nav>
   </header>
   <main>
-    <section id="weapons">
-      <h1>Weapons in Cambodia-Thailand Border Conflict (2025)</h1>
-      <p>Based on Government Reports and Credible News Sources</p>
-      <h2>Thailand</h2>
-      <div id="thai-weapons"></div>
-      <h2>Cambodia</h2>
-      <div id="cambodian-weapons"></div>
+    <section id="weapons" aria-labelledby="weapons-heading">
+      <h1 id="weapons-heading">Weapons Used in the Conflict</h1>
+      <p>Categorized weapons deployed by Cambodian and Thai forces in the 2025 border conflict.</p>
+      <div id="filter-menu" class="filter-menu" role="menu">
+        <button role="menuitem" data-filter="all">All Weapons</button>
+        <button role="menuitem" data-filter="Aircraft">Aircraft</button>
+        <button role="menuitem" data-filter="Air Cargo">Air Cargo</button>
+        <button role="menuitem" data-filter="Tanks">Tanks</button>
+        <button role="menuitem" data-filter="Multi Rocket Launchers">Multi Rocket Launchers</button>
+        <button role="menuitem" data-filter="Firearms">Firearms</button>
+        <button role="menuitem" data-filter="Bombs from Jet">Bombs from Jet</button>
+        <button role="menuitem" data-filter="Chemical Weapons">Chemical Weapons</button>
+        <button role="menuitem" data-filter="Mortars">Mortars</button>
+      </div>
+      <div id="weapons-content" class="bento-grid"></div>
     </section>
   </main>
   <footer>
     <p>&copy; 2025 Cambodia-Thailand Conflict Documentary</p>
   </footer>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      fetch('assets/data/weapons.json')
-        .then(response => response.json())
-        .then(data => {
-          const thaiWeapons = document.getElementById('thai-weapons');
-          const cambodianWeapons = document.getElementById('cambodian-weapons');
-
-          // Thai Weapons
-          data.thailand.forEach((weapon, index) => {
-            const div = document.createElement('div');
-            div.className = 'weapon-item';
-            div.style.animationDelay = `${index * 0.2}s`;
-            div.innerHTML = `
-              <h3>${weapon.type}</h3>
-              <p>${weapon.description}</p>
-              ${weapon.image ? `<img src="${weapon.image}" alt="${weapon.type}" class="weapon-image">` : ''}
-              <h4>Sources</h4>
-              <ul>${weapon.sources.length ? weapon.sources.map(s => `<li>${s}</li>`).join('') : '<li>No verified sources available</li>'}</ul>
-            `;
-            thaiWeapons.appendChild(div);
-          });
-
-          // Cambodian Weapons
-          data.cambodia.forEach((weapon, index) => {
-            const div = document.createElement('div');
-            div.className = 'weapon-item';
-            div.style.animationDelay = `${index * 0.2}s`;
-            div.innerHTML = `
-              <h3>${weapon.type}</h3>
-              <p>${weapon.description}</p>
-              ${weapon.image ? `<img src="${weapon.image}" alt="${weapon.type}" class="weapon-image">` : ''}
-              <h4>Sources</h4>
-              <ul>${weapon.sources.length ? weapon.sources.map(s => `<li>${s}</li>`).join('') : '<li>No verified sources available</li>'}</ul>
-            `;
-            cambodianWeapons.appendChild(div);
-          });
-        });
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
