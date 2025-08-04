@@ -14,16 +14,4 @@ document.addEventListener('DOMContentLoaded', () => {
         timelineContent.appendChild(div);
       });
     });
-
-  // Dark Mode Toggle
-  const toggleButton = document.getElementById('dark-mode-toggle');
-  toggleButton.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
-  });
-
-  // Apply saved dark mode preference
-  if (localStorage.getItem('darkMode') === 'true') {
-    document.body.classList.add('dark-mode');
-  }
 });
