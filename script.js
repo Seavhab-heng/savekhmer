@@ -30,14 +30,10 @@ document.addEventListener('DOMContentLoaded', () => {
   if (document.getElementById('weapons-content')) {
     const weaponsContent = document.getElementById('weapons-content');
     const filterButtons = document.querySelectorAll('#filter-menu button');
-
-    // Load all weapons initially
     fetch('assets/data/weapons.json')
       .then(response => response.json())
       .then(data => {
         renderWeapons(data, 'all');
-
-        // Filter functionality
         filterButtons.forEach(button => {
           button.addEventListener('click', () => {
             const filter = button.getAttribute('data-filter');
@@ -68,5 +64,93 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     }
+  }
+
+  // Load Map (for map.html)
+  if (document.getElementById('map')) {
+    const map = L.map('map').setView([14.39, 104.68], 8); // Center on Preah Vihear
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      maxZoom: 18
+    }).addTo(map);
+
+    // Heatmap Layer
+    let heatLayer;
+    fetch('assets/data/province-metrics.json')
+      .then(response => response.json())
+      .then(data => {
+        const provinceInfo = document.getElementById('province-info');
+        const filterButtons = document.querySelectorAll('#filter-menu button');
+
+        // Initial render: all events
+        renderMap(data, 'all');
+
+        // Filter functionality
+        filterButtons.forEach(button => {
+          button.addEventListener('click', () => {
+            const filter = button.getAttribute('data-filter');
+            renderMap(data, filter);
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+          });
+        });
+
+        function renderMap(data, filter) {
+          // Clear previous layers
+          if (heatLayer) map.removeLayer(heatLayer);
+          provinceInfo.innerHTML = '';
+          map.eachLayer(layer => {
+            if (layer instanceof L.Marker) map.removeLayer(layer);
+          });
+
+          // Heatmap points
+          const heatPoints = [];
+          data.forEach(province => {
+            province.events.forEach(event => {
+              if (filter === 'all' || event.date === filter) {
+                heatPoints.push([province.coordinates[0], province.coordinates[1], event.intensity]);
+              }
+            });
+          });
+
+          // Add heatmap
+          heatLayer = L.heatLayer(heatPoints, {
+            radius: 25,
+            blur: 15,
+            maxZoom: 17,
+            gradient: { 0.4: 'yellow', 0.65: 'orange', 1: 'red' }
+          }).addTo(map);
+
+          // Add markers and province info
+          data.forEach(province => {
+            if (province.events.length > 0) {
+              const events = province.events.filter(event => filter === 'all' || event.date === filter);
+              if (events.length > 0) {
+                // Marker with popup
+                const marker = L.marker(province.coordinates, {
+                  title: province.province
+                }).addTo(map);
+                marker.bindPopup(`
+                  <h3>${province.province}</h3>
+                  <p>Displaced: ${province.displaced || 0}</p>
+                  <ul>${events.map(event => `<li><strong>${event.date}</strong>: ${event.description}</li>`).join('')}</ul>
+                `);
+
+                // Province info in bento grid
+                const div = document.createElement('div');
+                div.className = 'event-item';
+                div.innerHTML = `
+                  <h3>${province.province}</h3>
+                  <p>Displaced: ${province.displaced || 0}</p>
+                  <ul>${events.map(event => `<li><strong>${event.date}</strong>: ${event.description}</li>`).join('')}</ul>
+                `;
+                div.addEventListener('mouseenter', () => div.classList.add('hovered'));
+                div.addEventListener('mouseleave', () => div.classList.remove('hovered'));
+                provinceInfo.appendChild(div);
+              }
+            }
+          });
+        }
+      });
   }
 });
