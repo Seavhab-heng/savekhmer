@@ -78,17 +78,17 @@ main {
   margin: 0 auto;
 }
 
-#timeline, #weapons, #war-crimes {
+#timeline, #weapons, #war-crimes, #map-section {
   text-align: center;
 }
 
-#timeline h1, #weapons h1, #war-crimes h1 {
+#timeline h1, #weapons h1, #war-crimes h1, #map-section h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   color: #2c3e50;
 }
 
-#timeline p, #weapons p, #war-crimes p {
+#timeline p, #weapons p, #war-crimes p, #map-section p {
   font-size: 1.1rem;
   margin-bottom: 2rem;
   color: #666;
@@ -138,7 +138,7 @@ main {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.timeline-item.hovered, .weapon-item.hovered {
+.timeline-item.hovered, .weapon-item.hovered, .event-item.hovered {
   transform: scale(1.02);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
@@ -150,13 +150,13 @@ main {
   }
 }
 
-.timeline-item strong, .weapon-item strong {
+.timeline-item strong, .weapon-item strong, .event-item strong {
   color: #2c3e50;
   margin-right: 0.5rem;
   font-weight: bold;
 }
 
-.weapon-item h3, .accusation-item h3, .call-item h3 {
+.weapon-item h3, .accusation-item h3, .call-item h3, .event-item h3 {
   color: #2c3e50;
   margin-bottom: 0.5rem;
 }
@@ -219,13 +219,6 @@ main {
 
 #province-info {
   margin-top: 1rem;
-  padding: 1rem;
-  background: white;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 #province-info.active {
@@ -246,6 +239,28 @@ main {
 
 .metrics-list li strong {
   color: #2c3e50;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 5px;
+}
+
+.leaflet-popup-content h3 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+.leaflet-popup-content p {
+  margin: 0.5rem 0;
+}
+
+.leaflet-popup-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.leaflet-popup-content ul li {
+  margin-bottom: 0.5rem;
 }
 
 footer {
@@ -291,10 +306,10 @@ footer {
   .bento-grid {
     grid-template-columns: 1fr;
   }
-  #timeline h1, #weapons h1, #war-crimes h1 {
+  #timeline h1, #weapons h1, #war-crimes h1, #map-section h1 {
     font-size: 2rem;
   }
-  #timeline p, #weapons p, #war-crimes p {
+  #timeline p, #weapons p, #war-crimes p, #map-section p {
     font-size: 1rem;
   }
   #map {
