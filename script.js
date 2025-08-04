@@ -76,12 +76,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Current Date and Time
     const currentTime = document.getElementById('current-time');
-    currentTime.textContent = `06:35 +08, 8/5/2025`; // Hardcoded to match system time
+    currentTime.textContent = `07:10 +08, 8/5/2025`; // Hardcoded to match system time
 
     // Heatmap Layer
     let heatLayer;
-    // Military Regions Overlay
-    let militaryOverlay;
 
     fetch('assets/data/province-metrics.json')
       .then(response => {
@@ -91,51 +89,9 @@ document.addEventListener('DOMContentLoaded', () => {
       .then(data => {
         const provinceInfo = document.getElementById('province-info');
         const filterButtons = document.querySelectorAll('#filter-menu button');
-        const overlayToggle = document.getElementById('overlay-toggle');
 
         // Initial render: all events
         renderMap(data, 'all');
-
-        // Load Military Regions Overlay
-        fetch('assets/data/military-regions.geojson')
-          .then(response => {
-            if (!response.ok) throw new Error('Failed to fetch military regions');
-            return response.json();
-          })
-          .then(geojson => {
-            militaryOverlay = L.geoJSON(geojson, {
-              style: function (feature) {
-                return {
-                  fillColor: feature.properties.mask ? '#ff4500' : '#ffffff', // Orange for mask
-                  fillOpacity: feature.properties.mask ? 0.4 : 0,          // 40% opacity
-                  color: feature.properties.mask ? '#ff4500' : '#000000',  // Border color
-                  weight: feature.properties.mask ? 2 : 0,                 // Border weight
-                  opacity: feature.properties.mask ? 0.8 : 0,              // Border opacity
-                  dashArray: feature.properties.mask ? '5, 5' : ''         // Dashed line for mask effect
-                };
-              },
-              onEachFeature: (feature, layer) => {
-                layer.bindPopup(`
-                  <h3>${feature.properties.region}</h3>
-                  <p>Country: ${feature.properties.country}</p>
-                  <p>${feature.properties.description}</p>
-                  <p>Opacity: 40%</p>
-                `);
-              }
-            }).addTo(map); // Add overlay by default
-
-            // Toggle Overlay
-            overlayToggle.addEventListener('click', () => {
-              if (map.hasLayer(militaryOverlay)) {
-                map.removeLayer(militaryOverlay);
-                overlayToggle.textContent = 'Show Military Regions';
-              } else {
-                map.addLayer(militaryOverlay);
-                overlayToggle.textContent = 'Hide Military Regions';
-              }
-            });
-          })
-          .catch(error => console.error('Error loading military regions overlay:', error));
 
         // Filter functionality
         filterButtons.forEach(button => {
@@ -155,14 +111,20 @@ document.addEventListener('DOMContentLoaded', () => {
             if (layer instanceof L.Marker) map.removeLayer(layer);
           });
 
-          // Heatmap points
+          // Heatmap points (updated for July 24-29 events)
           const heatPoints = [];
           data.forEach(province => {
-            province.events.forEach(event => {
-              if (filter === 'all' || event.date === filter) {
-                heatPoints.push([province.coordinates[0], province.coordinates[1], event.intensity]);
-              }
-            });
+            if (province.events) {
+              province.events.forEach(event => {
+                if (filter === 'all' || event.date === filter) {
+                  if (event.date >= '2025-07-24' && event.date <= '2025-07-29') {
+                    heatPoints.push([province.coordinates[0], province.coordinates[1], event.intensity * 1.5]); // Increased intensity for escalation
+                  } else {
+                    heatPoints.push([province.coordinates[0], province.coordinates[1], event.intensity]);
+                  }
+                }
+              });
+            }
           });
 
           // Add heatmap
@@ -173,9 +135,9 @@ document.addEventListener('DOMContentLoaded', () => {
             gradient: { 0.4: 'yellow', 0.65: 'orange', 1: 'red' }
           }).addTo(map);
 
-          // Add markers and province info
+          // Add markers and province info (updated for July 24-29)
           data.forEach(province => {
-            if (province.events.length > 0) {
+            if (province.events && province.events.length > 0) {
               const events = province.events.filter(event => filter === 'all' || event.date === filter);
               if (events.length > 0) {
                 const marker = L.marker(province.coordinates, {
@@ -200,6 +162,17 @@ document.addEventListener('DOMContentLoaded', () => {
               }
             }
           });
+
+          // Add specific marker for July 29 event (Oddar Meanchey)
+          if (filter === 'all' || filter === '2025-07-29') {
+            const oddarMeanchey = [14.15, 103.50]; // Approximate coordinates
+            const marker = L.marker(oddarMeanchey, { title: 'Oddar Meanchey' }).addTo(map);
+            marker.bindPopup(`
+              <h3>Oddar Meanchey</h3>
+              <p>Date: July 29, 2025</p>
+              <p>Description: Thai forces captured unarmed Cambodian troops post-ceasefire.</p>
+            `);
+          }
         }
       })
       .catch(error => console.error('Error loading province metrics:', error));
