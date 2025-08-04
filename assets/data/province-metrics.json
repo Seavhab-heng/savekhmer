@@ -1,0 +1,104 @@
+{
+  "provinces": [
+    {
+      "name": "Siem Reap",
+      "coords": [13.3640, 103.8601],
+      "metrics": {
+        "displaced": 61907,
+        "civilians_killed": 0,
+        "military_killed": 0,
+        "civilian_houses": 0,
+        "commercial_buildings": 0,
+        "hospitals": 0,
+        "temples_pagodas": 0,
+        "military_barracks": 0,
+        "schools": 0
+      },
+      "media": [
+        "Video: Civilians Fleeing to Siem Reap",
+        "Article: Al Jazeera on Community Support"
+      ],
+      "intensity": 0.9
+    },
+    {
+      "name": "Oddar Meanchey",
+      "coords": [14.1812, 103.5176],
+      "metrics": {
+        "displaced": 39546,
+        "civilians_killed": 0,
+        "military_killed": 0,
+        "civilian_houses": 0,
+        "commercial_buildings": 0,
+        "hospitals": 0,
+        "temples_pagodas": 0,
+        "military_barracks": 0,
+        "schools": 0
+      },
+      "media": [
+        "Image: Evacuations in O'Smach",
+        "Article: Khmer Times on Local Economic Collapse"
+      ],
+      "intensity": 0.8
+    },
+    {
+      "name": "Banteay Meanchey",
+      "coords": [13.6673, 102.8975],
+      "metrics": {
+        "displaced": 35057,
+        "civilians_killed": 0,
+        "military_killed": 0,
+        "civilian_houses": 0,
+        "commercial_buildings": 0,
+        "hospitals": 0,
+        "temples_pagodas": 0,
+        "military_barracks": 0,
+        "schools": 0
+      },
+      "media": [
+        "Image: Temporary Shelters in Banteay Meanchey",
+        "Article: Reuters on Civilian Displacement"
+      ],
+      "intensity": 0.75
+    },
+    {
+      "name": "Preah Vihear",
+      "coords": [13.8073, 104.9802],
+      "metrics": {
+        "displaced": 32558,
+        "civilians_killed": 0,
+        "military_killed": 0,
+        "civilian_houses": 0,
+        "commercial_buildings": 0,
+        "hospitals": 0,
+        "temples_pagodas": 0,
+        "military_barracks": 0,
+        "schools": 0
+      },
+      "media": [
+        "Image: Wat Por 5000 Shelter",
+        "Article: TTN English on Preah Vihear Evacuations"
+      ],
+      "intensity": 0.7
+    },
+    {
+      "name": "Pursat",
+      "coords": [12.5376, 103.9192],
+      "metrics": {
+        "displaced": 3026,
+        "civilians_killed": 0,
+        "military_killed": 0,
+        "civilian_houses": 0,
+        "commercial_buildings": 0,
+        "hospitals": 0,
+        "temples_pagodas": 0,
+        "military_barracks": 0,
+        "schools": 0
+      },
+      "media": [
+        "Image: Humanitarian Aid in Pursat",
+        "Article: Local Reports on Pursat Evacuations"
+      ],
+      "intensity": 0.2
+    }
+  ]
+}
