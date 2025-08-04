@@ -3,47 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Media & Supporters</title>
+  <meta name="description" content="Media and supporter logos documenting the Cambodia-Thailand border conflict 2025.">
+  <title>Media & Supporters | Cambodia-Thailand Border Conflict 2025</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="assets/icons/favicon.ico">
 </head>
 <body>
   <header>
-    <nav>
+    <nav aria-label="Main navigation">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="map.html">Map</a></li>
-        <li><a href="media.html">Media & Supporters</a></li>
+        <li><a href="media.html" aria-current="page">Media & Supporters</a></li>
         <li><a href="weapons.html">Weapons</a></li>
+        <li><a href="war-criminal.html">War Crimes</a></li>
         <li><a href="donate.html">Donate</a></li>
       </ul>
+      <button id="dark-mode-toggle" aria-label="Toggle dark mode">
+        <img src="assets/icons/dark-mode-toggle.svg" alt="Dark mode toggle">
+      </button>
     </nav>
   </header>
   <main>
-    <section id="media">
-      <h1>Media Evidence: Civilian Hardships</h1>
-      <div class="media-grid">
-        <div class="media-item"><img src="assets/images/osmach_evacuation.jpg" alt="Evacuations in O'Smach, Oddar Meanchey"></div>
-        <div class="media-item"><video src="assets/images/siem_reap_fleeing.mp4" controls></video></div>
-        <div class="media-item"><img src="assets/images/preah_vihear_shelter.jpg" alt="Wat Por 5000 Shelter in Preah Vihear"></div>
-        <div class="media-item"><img src="assets/images/banteay_meanchey_camp.jpg" alt="Temporary Shelters in Banteay Meanchey"></div>
+    <section id="media" aria-labelledby="media-heading">
+      <h1 id="media-heading">Media & Supporters</h1>
+      <div class="media-grid bento-grid">
+        <div class="media-item"><img src="assets/images/osmach_evacuation.jpg" alt="Osmach evacuation"></div>
+        <div class="media-item"><video src="assets/images/siem_reap_fleeing.mp4" controls aria-label="Siem Reap civilians fleeing"></video></div>
+        <div class="media-item"><img src="assets/images/preah_vihear_shelter.jpg" alt="Preah Vihear shelter"></div>
+        <div class="media-item"><img src="assets/images/banteay_meanchey_camp.jpg" alt="Banteay Meanchey camp"></div>
       </div>
-    </section>
-    <section id="supporters">
-      <h1>Supporters</h1>
-      <h2>Truth</h2>
-      <div class="supporter-grid">
-        <img src="assets/images/reuters.png" alt="Reuters" class="supporter-logo">
-        <img src="assets/images/aljazeera.png" alt="Al Jazeera" class="supporter-logo">
-        <img src="assets/images/khmertimes.png" alt="Khmer Times" class="supporter-logo">
-      </div>
-      <h2>Fake</h2>
-      <div class="supporter-grid">
-        <img src="assets/images/fake_news.png" alt="Unverified Source" class="supporter-logo">
+      <h2>Supporters</h2>
+      <div class="supporter-grid bento-grid">
+        <div class="supporter-item"><img src="assets/images/reuters.png" alt="Reuters logo"></div>
+        <div class="supporter-item"><img src="assets/images/aljazeera.png" alt="Al Jazeera logo"></div>
+        <div class="supporter-item"><img src="assets/images/khmertimes.png" alt="Khmer Times logo"></div>
+        <div class="supporter-item"><img src="assets/images/fake_news.png" alt="Fake news warning"></div>
       </div>
     </section>
   </main>
   <footer>
     <p>&copy; 2025 Cambodia-Thailand Conflict Documentary</p>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
