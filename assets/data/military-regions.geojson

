@@ -1,0 +1,37 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "region": "RCAF Northern Region",
+        "country": "Cambodia",
+        "description": "Covers Preah Vihear, Oddar Meanchey, and An Ses conflict zones."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [102.35, 13.70], [105.00, 13.70], [105.00, 14.70], [102.35, 14.70], [102.35, 13.70]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "region": "Thai Second Army Region",
+        "country": "Thailand",
+        "description": "Covers Surin, Sisaket, Ubon Ratchathani, and border conflict areas."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [103.50, 14.00], [105.50, 14.00], [105.50, 15.50], [103.50, 15.50], [103.50, 14.00]
+          ]
+        ]
+      }
+    }
+  ]
+}
