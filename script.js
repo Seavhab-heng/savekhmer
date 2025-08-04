@@ -74,6 +74,11 @@ document.addEventListener('DOMContentLoaded', () => {
       maxZoom: 18
     }).addTo(map);
 
+    // Current Date and Time
+    const currentTime = document.getElementById('current-time');
+    const now = new Date();
+    currentTime.textContent = `06:21 +08, 8/5/2025`; // Hardcoded to match system time
+
     // Heatmap Layer
     let heatLayer;
     // Military Regions Overlay
@@ -94,21 +99,25 @@ document.addEventListener('DOMContentLoaded', () => {
           .then(response => response.json())
           .then(geojson => {
             militaryOverlay = L.geoJSON(geojson, {
-              style: {
-                fillColor: '#ff4500', // Orange for military regions
-                fillOpacity: 0.4,    // Semi-transparent overlay
-                color: '#ff4500',
-                weight: 2,
-                opacity: 0.8
+              style: function (feature) {
+                return {
+                  fillColor: feature.properties.mask ? '#ff4500' : '#ffffff', // Orange for mask
+                  fillOpacity: feature.properties.mask ? 0.4 : 0,          // 40% opacity
+                  color: feature.properties.mask ? '#ff4500' : '#000000',  // Border color
+                  weight: feature.properties.mask ? 2 : 0,                 // Border weight
+                  opacity: feature.properties.mask ? 0.8 : 0,              // Border opacity
+                  dashArray: feature.properties.mask ? '5, 5' : ''         // Dashed line for mask effect
+                };
               },
               onEachFeature: (feature, layer) => {
                 layer.bindPopup(`
                   <h3>${feature.properties.region}</h3>
                   <p>Country: ${feature.properties.country}</p>
                   <p>${feature.properties.description}</p>
+                  <p>Opacity: 40%</p>
                 `);
               }
-            }).addTo(map);
+            }).addTo(map); // Add overlay by default
 
             // Toggle Overlay
             overlayToggle.addEventListener('click', () => {
@@ -120,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 overlayToggle.textContent = 'Hide Military Regions';
               }
             });
-          });
+          }).catch(error => console.error('Error loading military regions:', error));
 
         // Filter functionality
         filterButtons.forEach(button => {
@@ -186,6 +195,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
           });
         }
-      });
+      }).catch(error => console.error('Error loading province metrics:', error));
   }
 });
