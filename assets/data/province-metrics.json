@@ -1,104 +1,126 @@
-{
-  "provinces": [
-    {
-      "name": "Siem Reap",
-      "coords": [13.3640, 103.8601],
-      "metrics": {
-        "displaced": 61907,
-        "civilians_killed": 0,
-        "military_killed": 0,
-        "civilian_houses": 0,
-        "commercial_buildings": 0,
-        "hospitals": 0,
-        "temples_pagodas": 0,
-        "military_barracks": 0,
-        "schools": 0
+[
+  {
+    "province": "Preah Vihear",
+    "coordinates": [14.39, 104.68],
+    "displaced": 32558,
+    "events": [
+      {
+        "date": "2025-07-24",
+        "description": "Thai F-16 jets dropped MK-82 bombs near Preah Vihear Temple, escalating conflict. Cambodian forces retaliated with BM-21 rocket launchers.",
+        "intensity": 0.9
       },
-      "media": [
-        "Video: Civilians Fleeing to Siem Reap",
-        "Article: Al Jazeera on Community Support"
-      ],
-      "intensity": 0.9
-    },
-    {
-      "name": "Oddar Meanchey",
-      "coords": [14.1812, 103.5176],
-      "metrics": {
-        "displaced": 39546,
-        "civilians_killed": 0,
-        "military_killed": 0,
-        "civilian_houses": 0,
-        "commercial_buildings": 0,
-        "hospitals": 0,
-        "temples_pagodas": 0,
-        "military_barracks": 0,
-        "schools": 0
+      {
+        "date": "2025-05-28",
+        "description": "Cambodian soldier killed in skirmish near Preah Vihear Temple.",
+        "intensity": 0.7
+      }
+    ]
+  },
+  {
+    "province": "Oddar Meanchey",
+    "coordinates": [14.17, 103.58],
+    "displaced": 39546,
+    "events": [
+      {
+        "date": "2025-07-24",
+        "description": "Clashes at Ta Muen Thom temple; Thai forces placed barbed wire, Cambodian forces fired rockets, killing one civilian.",
+        "intensity": 0.8
       },
-      "media": [
-        "Image: Evacuations in O'Smach",
-        "Article: Khmer Times on Local Economic Collapse"
-      ],
-      "intensity": 0.8
-    },
-    {
-      "name": "Banteay Meanchey",
-      "coords": [13.6673, 102.8975],
-      "metrics": {
-        "displaced": 35057,
-        "civilians_killed": 0,
-        "military_killed": 0,
-        "civilian_houses": 0,
-        "commercial_buildings": 0,
-        "hospitals": 0,
-        "temples_pagodas": 0,
-        "military_barracks": 0,
-        "schools": 0
-      },
-      "media": [
-        "Image: Temporary Shelters in Banteay Meanchey",
-        "Article: Reuters on Civilian Displacement"
-      ],
-      "intensity": 0.75
-    },
-    {
-      "name": "Preah Vihear",
-      "coords": [13.8073, 104.9802],
-      "metrics": {
-        "displaced": 32558,
-        "civilians_killed": 0,
-        "military_killed": 0,
-        "civilian_houses": 0,
-        "commercial_buildings": 0,
-        "hospitals": 0,
-        "temples_pagodas": 0,
-        "military_barracks": 0,
-        "schools": 0
-      },
-      "media": [
-        "Image: Wat Por 5000 Shelter",
-        "Article: TTN English on Preah Vihear Evacuations"
-      ],
-      "intensity": 0.7
-    },
-    {
-      "name": "Pursat",
-      "coords": [12.5376, 103.9192],
-      "metrics": {
-        "displaced": 3026,
-        "civilians_killed": 0,
-        "military_killed": 0,
-        "civilian_houses": 0,
-        "commercial_buildings": 0,
-        "hospitals": 0,
-        "temples_pagodas": 0,
-        "military_barracks": 0,
-        "schools": 0
-      },
-      "media": [
-        "Image: Humanitarian Aid in Pursat",
-        "Article: Local Reports on Pursat Evacuations"
-      ],
-      "intensity": 0.2
-    }
-  ]
-}
+      {
+        "date": "2025-07-30",
+        "description": "Damaged gas station in Phrong village after ceasefire; foreign diplomats visited An Ses checkpoint.",
+        "intensity": 0.6
+      }
+    ]
+  },
+  {
+    "province": "An Ses",
+    "coordinates": [14.42, 104.65],
+    "displaced": 0,
+    "events": [
+      {
+        "date": "2025-08-04",
+        "description": "Thai forces with excavators entered An Ses, laying barbed wire, violating July 28 ceasefire. Cambodia requested ICRC mediation.",
+        "intensity": 0.85
+      }
+    ]
+  },
+  {
+    "province": "Phu Makuea",
+    "coordinates": [14.45, 104.62],
+    "displaced": 0,
+    "events": [
+      {
+        "date": "2025-07-26",
+        "description": "Thai forces captured Phu Makuea summit, advancing 300m past Cambodian lines.",
+        "intensity": 0.75
+      }
+    ]
+  },
+  {
+    "province": "Ta Thav",
+    "coordinates": [14.40, 104.67],
+    "displaced": 0,
+    "events": [
+      {
+        "date": "2025-07-26",
+        "description": "Thai forces advanced toward Ta Thav village near Preah Vihear.",
+        "intensity": 0.7
+      }
+    ]
+  },
+  {
+    "province": "Siem Reap",
+    "coordinates": [13.36, 103.85],
+    "displaced": 61907,
+    "events": []
+  },
+  {
+    "province": "Banteay Meanchey",
+    "coordinates": [13.66, 102.89],
+    "displaced": 35057,
+    "events": []
+  },
+  {
+    "province": "Pursat",
+    "coordinates": [12.53, 103.92],
+    "displaced": 3026,
+    "events": []
+  },
+  {
+    "province": "Surin (Thailand)",
+    "coordinates": [14.88, 103.49],
+    "displaced": 50000,
+    "events": [
+      {
+        "date": "2025-07-24",
+        "description": "Cambodian BM-21 rockets struck residential area in Kap Choeng District, injuring three civilians.",
+        "intensity": 0.8
+      }
+    ]
+  },
+  {
+    "province": "Sisaket (Thailand)",
+    "coordinates": [15.11, 104.32],
+    "displaced": 40000,
+    "events": [
+      {
+        "date": "2025-07-24",
+        "description": "Cambodian rocket hit gas station in Kantharalak District, killing six civilians.",
+        "intensity": 0.85
+      }
+    ]
+  },
+  {
+    "province": "Ubon Ratchathani (Thailand)",
+    "coordinates": [15.22, 104.85],
+    "displaced": 30000,
+    "events": [
+      {
+        "date": "2025-07-24",
+        "description": "Civilian deaths reported from Cambodian artillery fire.",
+        "intensity": 0.75
+      }
+    ]
+  }
+]
