@@ -1,153 +1,112 @@
-{
-  "thailand": [
-    {
-      "type": "M16 Rifles",
-      "description": "U.S.-made M16A1 and M16A4 assault rifles, some equipped with M203 40mm under-barrel grenade launchers using M433 HEDP grenades. Used by Thai soldiers in ground engagements.",
-      "sources": [
-        "X post by @war_noir, July 25, 2025: Thai soldiers using M16A4 and M16A1 rifles with M203 launchers.",
-        "X post by @war_noir, July 26, 2025: M16A4 rifles captured from Cambodian positions."
-      ],
-      "image": "assets/images/m16_rifle.jpg"
-    },
-    {
-      "type": "Heavy Artillery",
-      "description": "Includes 155mm and 105mm towed artillery (e.g., Nexter LG1 Mk III 105mm howitzers) and rocket systems. Used for sustained bombardment in Surin and Ubon Ratchathani provinces.",
-      "sources": [
-        "Reuters, July 25, 2025: Thai mobile artillery units fired towards Cambodia in Surin province.",
-        "CNN, July 24, 2025: Thai forces responded with artillery fire after Cambodian rocket attacks.",
-        "IISS Military Balance 2025: Thailand has over 2,600 artillery pieces, including 56 155mm and 550 105mm guns.",
-        "X post by @Defence_Index, July 26, 2025: Nexter LG1 Mk III howitzers deployed."
-      ],
-      "image": "assets/images/thai_artillery.jpg"
-    },
-    {
-      "type": "Mortars",
-      "description": "M261 and M472 mortar shells used in drone strikes and ground engagements. Thai forces employed mortars in response to Cambodian BM-21 rocket attacks.",
-      "sources": [
-        "Forbes, August 1, 2025: Drone attacks used 60mm M261 and M472 mortar rounds.",
-        "CNN, July 24, 2025: Thai mortars responded to Cambodian BM-21 rockets.",
-        "X post by @sentdefender, July 24, 2025: Drone strikes with M261 and M472 mortar shells."
-      ],
-      "image": "assets/images/mortar_shell.jpg"
-    },
-    {
-      "type": "Tanks",
-      "description": "Includes M60A3 Patton MBTs (Elbit-upgraded), Type 85 APCs, and T-84 Oplot tanks. Deployed in ground battles near Ta Muen Thom and Preah Vihear.",
-      "sources": [
-        "Times of India, July 25, 2025: Thai tanks engaged Cambodian forces.",
-        "IISS Military Balance 2025: Thailand has 400 battle tanks, including 60 Chinese VT-4 and older U.S. M60s.",
-        "X post by @Defence_Index, July 26, 2025: M60A3 Patton and Type 85 APCs deployed.",
-        "X post by @sentdefender, July 24, 2025: T-84 Oplot tanks in border clashes."
-      ],
-      "image": "assets/images/thai_tank.jpg"
-    },
-    {
-      "type": "F-16 Fighter Jets",
-      "description": "U.S.-made F-16A/B jets, some with Mid-Life Update, armed with Mk 82 (500 lb) bombs and Lizard III or KGGB precision-guided glide bombs. Used for airstrikes on Cambodian military targets, including command posts and artillery positions.",
-      "sources": [
-        "Reuters, July 25, 2025: Thai F-16 jet bombed Cambodian military target.",
-        "CNN, July 24, 2025: F-16s dropped bombs near Wat Kaew Seekha Kiri Svarak Pagoda.",
-        "Forbes, August 1, 2025: F-16s with GBU-12 Paveway II bombs targeted artillery positions.",
-        "X post by @T_55AM1_, July 24, 2025: F-16s armed with Mk 82 bombs and Lizard III kits.",
-        "X post by @war_noir, July 25, 2025: F-16s used KGGB glide bombs."
-      ],
-      "image": "assets/images/f16_jet.jpg"
-    },
-    {
-      "type": "Gripen Fighter Jets",
-      "description": "Swedish-made Gripen C/D jets, used in a strike package with F-16s on July 26, 2025. Marked first combat use of Gripens, targeting Cambodian artillery positions.",
-      "sources": [
-        "ABC News, August 1, 2025: Thai forces used Gripen jets in combat.",
-        "Forbes, August 1, 2025: Gripen jets with F-16s targeted artillery positions.",
-        "IISS Military Balance 2025: Thailand has 11 Gripen C/D jets."
-      ],
-      "image": "assets/images/gripen_jet.jpg"
-    },
-    {
-      "type": "Drones",
-      "description": "Quadcopter and fixed-wing kamikaze drones, using M261/M472 mortar shells and improvised air-dropped bombs. Targeted Cambodian munitions depots and positions.",
-      "sources": [
-        "Forbes, August 1, 2025: Thai drones used 60mm mortar rounds and kamikaze attacks.",
-        "CNN, July 24, 2025: Thai drone launched for two minutes near Ta Muen Thom.",
-        "Defence Security Asia, July 25, 2025: Thai armed drones in precision attacks.",
-        "X post by @sentdefender, July 24, 2025: Drone strikes with M261/M472 shells."
-      ],
-      "image": "assets/images/thai_drone.jpg"
-    },
-    {
-      "type": "Cluster Munitions",
-      "description": "Alleged use of cluster munitions, condemned by Cambodia and human rights groups as indiscriminate. Thai military acknowledged they 'can be utilized when necessary,' but evidence is inconclusive.",
-      "sources": [
-        "ABC News, August 1, 2025: Cambodia accused Thailand of using cluster munitions.",
-        "Al Jazeera, July 25, 2025: Thailand accused of firing into civilian areas, possibly with cluster munitions.",
-        "BBC, July 25, 2025: Cambodia’s claim of Thai cluster munitions use unresponded by Thailand."
-      ],
-      "image": null
-    },
-    {
-      "type": "Chemical Weapons",
-      "description": "No credible evidence confirms Thai use of chemical weapons in the 2025 conflict. Claims remain unverified and are not supported by government or news reports.",
-      "sources": [
-        "Bangkok Post, August 1, 2025: RTA dismissed Cambodian claims of chemical weapons as 'baseless and malicious,' citing compliance with the Chemical Weapons Convention."
-      ],
-      "image": null
-    }
-  ],
-  "cambodia": [
-    {
-      "type": "BM-21 Grad Rocket Launchers",
-      "description": "Soviet-designed 122mm multiple rocket launchers, used to target Thai positions and civilian areas, including a gas station in Sisaket and Phnom Dongrak hospital.",
-      "sources": [
-        "Reuters, July 24, 2025: Cambodian BM-21 rockets hit Sisaket gas station, killing eight.",
-        "ABC News, August 1, 2025: Cambodian BM-21 Grad launchers used in Oddar Meanchey.",
-        "IISS Military Balance 2025: Cambodia has 480 artillery pieces, including RM-70 and BM-21 systems."
-      ],
-      "image": "assets/images/bm21_grad.jpg"
-    },
-    {
-      "type": "BMP-3 Infantry Fighting Vehicles",
-      "description": "Russian-made BMP-3 tanks, part of a $200 million arms deal with China in 2018. Deployed in ground engagements near Preah Vihear and Oddar Meanchey.",
-      "sources": [
-        "ABC News, August 1, 2025: Cambodia deployed BMP-3 tanks in border clashes.",
-        "IISS Military Balance 2025: Cambodia has over 200 battle tanks, including BMP-3s."
-      ],
-      "image": "assets/images/bmp3_tank.jpg"
-    },
-    {
-      "type": "RM-70 Rocket Launchers",
-      "description": "Czech-designed multiple rocket launchers, used alongside BM-21s for long-range strikes against Thai military targets.",
-      "sources": [
-        "ABC News, August 1, 2025: Cambodia’s RM-70 launchers used in conflict.",
-        "Wikipedia, List of Equipment of the Royal Cambodian Army, July 29, 2025: RM-70 systems in RCAF arsenal."
-      ],
-      "image": "assets/images/rm70_launcher.jpg"
-    },
-    {
-      "type": "T-55 Tanks",
-      "description": "Soviet-era T-55 tanks, part of Cambodia’s aging arsenal, used in defensive operations near disputed temples.",
-      "sources": [
-        "IISS Military Balance 2025: Cambodia’s 200+ battle tanks include T-55 series.",
-        "ABC News, August 1, 2025: T-55 tanks deployed in border conflict."
-      ],
-      "image": "assets/images/t55_tank.jpg"
-    },
-    {
-      "type": "Drones",
-      "description": "Reconnaissance drones deployed for surveillance, notably on July 31, 2025, over Thai territory, escalating tensions post-ceasefire.",
-      "sources": [
-        "Bangkok Post, August 1, 2025: Cambodian drones conducted reconnaissance in Thai territory.",
-        "The Nation, August 1, 2025: Cambodian UAVs detected post-ceasefire."
-      ],
-      "image": "assets/images/cambodian_drone.jpg"
-    },
-    {
-      "type": "Small Arms",
-      "description": "Includes AK-47 rifles and Type 56 assault rifles, standard for RCAF infantry in ground engagements.",
-      "sources": [
-        "Wikipedia, List of Equipment of the Royal Cambodian Army, July 29, 2025: AK-47 and Type 56 rifles in use.",
-        "IISS Military Balance 2025: Cambodia’s infantry relies on Soviet and Chinese small arms."
-      ],
-      "image": "assets/images/ak47_rifle.jpg"
-    }
-  ]
-}
+[
+  {
+    "category": "Aircraft",
+    "weapons": [
+      {
+        "name": "F16 Fighter Jet",
+        "description": "Used by Thai forces for precision strikes, including MK-82 bomb attacks on cultural sites.",
+        "image": "assets/images/f16_jet.jpg"
+      },
+      {
+        "name": "Gripen Fighter Jet",
+        "description": "Advanced Swedish-made jet used by Thai air forces in border conflict operations.",
+        "image": "assets/images/gripen_jet.jpg"
+      }
+    ]
+  },
+  {
+    "category": "Air Cargo",
+    "weapons": [
+      {
+        "name": "Lockheed C130H Hercules",
+        "description": "Transport aircraft used for troop and equipment deployment.",
+        "image": null
+      }
+    ]
+  },
+  {
+    "category": "Tanks",
+    "weapons": [
+      {
+        "name": "T-55",
+        "description": "Soviet-era main battle tank used by Cambodian forces.",
+        "image": "assets/images/t55_tank.jpg"
+      },
+      {
+        "name": "BMP-3",
+        "description": "Russian-made infantry fighting vehicle used by Thai forces.",
+        "image": "assets/images/bmp3_tank.jpg"
+      }
+    ]
+  },
+  {
+    "category": "Multi Rocket Launchers",
+    "weapons": [
+      {
+        "name": "BM-21",
+        "description": "Soviet-designed rocket launcher used for area saturation.",
+        "image": "assets/images/bm21_grad.jpg"
+      }
+    ]
+  },
+  {
+    "category": "Firearms",
+    "weapons": [
+      {
+        "name": "AK-47",
+        "description": "Widely used assault rifle by Cambodian forces.",
+        "image": "assets/images/ak47_rifle.jpg"
+      },
+      {
+        "name": "Type 56",
+        "description": "Chinese variant of the AK-47, used in ground operations.",
+        "image": null
+      },
+      {
+        "name": "M16",
+        "description": "Standard-issue rifle for Thai forces.",
+        "image": "assets/images/m16_rifle.jpg"
+      }
+    ]
+  },
+  {
+    "category": "Bombs from Jet",
+    "weapons": [
+      {
+        "name": "MK-82",
+        "description": "General-purpose bomb used in Thai airstrikes, targeting cultural sites like Preah Vihear.",
+        "image": null
+      },
+      {
+        "name": "Cluster Bombs",
+        "description": "Alleged use by Thai forces, condemned as indiscriminate.",
+        "image": null
+      }
+    ]
+  },
+  {
+    "category": "Chemical Weapons",
+    "weapons": [
+      {
+        "name": "Unknown",
+        "description": "Suspected use of toxic gas/chemical weapons by Thai forces, unverified.",
+        "image": null
+      }
+    ]
+  },
+  {
+    "category": "Mortars",
+    "weapons": [
+      {
+        "name": "M261",
+        "description": "Lightweight mortar used for close support.",
+        "image": null
+      },
+      {
+        "name": "M472",
+        "description": "Heavy mortar used in sustained engagements.",
+        "image": "assets/images/mortar_shell.jpg"
+      }
+    ]
+  }
+]
