@@ -76,14 +76,51 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Heatmap Layer
     let heatLayer;
+    // Military Regions Overlay
+    let militaryOverlay;
+
     fetch('assets/data/province-metrics.json')
       .then(response => response.json())
       .then(data => {
         const provinceInfo = document.getElementById('province-info');
         const filterButtons = document.querySelectorAll('#filter-menu button');
+        const overlayToggle = document.getElementById('overlay-toggle');
 
         // Initial render: all events
         renderMap(data, 'all');
+
+        // Load Military Regions Overlay
+        fetch('assets/data/military-regions.geojson')
+          .then(response => response.json())
+          .then(geojson => {
+            militaryOverlay = L.geoJSON(geojson, {
+              style: {
+                fillColor: '#ff4500', // Orange for military regions
+                fillOpacity: 0.4,    // Semi-transparent overlay
+                color: '#ff4500',
+                weight: 2,
+                opacity: 0.8
+              },
+              onEachFeature: (feature, layer) => {
+                layer.bindPopup(`
+                  <h3>${feature.properties.region}</h3>
+                  <p>Country: ${feature.properties.country}</p>
+                  <p>${feature.properties.description}</p>
+                `);
+              }
+            }).addTo(map);
+
+            // Toggle Overlay
+            overlayToggle.addEventListener('click', () => {
+              if (map.hasLayer(militaryOverlay)) {
+                map.removeLayer(militaryOverlay);
+                overlayToggle.textContent = 'Show Military Regions';
+              } else {
+                map.addLayer(militaryOverlay);
+                overlayToggle.textContent = 'Hide Military Regions';
+              }
+            });
+          });
 
         // Filter functionality
         filterButtons.forEach(button => {
@@ -126,7 +163,6 @@ document.addEventListener('DOMContentLoaded', () => {
             if (province.events.length > 0) {
               const events = province.events.filter(event => filter === 'all' || event.date === filter);
               if (events.length > 0) {
-                // Marker with popup
                 const marker = L.marker(province.coordinates, {
                   title: province.province
                 }).addTo(map);
@@ -136,7 +172,6 @@ document.addEventListener('DOMContentLoaded', () => {
                   <ul>${events.map(event => `<li><strong>${event.date}</strong>: ${event.description}</li>`).join('')}</ul>
                 `);
 
-                // Province info in bento grid
                 const div = document.createElement('div');
                 div.className = 'event-item';
                 div.innerHTML = `
