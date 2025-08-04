@@ -15,6 +15,43 @@ header {
   padding: 1rem;
   display: flex;
   justify-content: center;
+  position: relative;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 3px;
+  background: white;
+  margin: 5px 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+nav {
+  transition: transform 0.3s ease;
 }
 
 nav ul {
@@ -61,6 +98,33 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
+}
+
+.filter-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.filter-menu button {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.filter-menu button:hover, .filter-menu button.active {
+  background: #2980b9;
+}
+
+.filter-menu button:focus {
+  outline: 2px solid #2c3e50;
+  outline-offset: 2px;
 }
 
 .timeline-item, .weapon-item, .accusation-item, .event-item, .call-item {
@@ -200,9 +264,26 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  nav {
+    transform: translateX(-100%);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background: #2c3e50;
+    padding-top: 4rem;
+  }
+  nav.active {
+    transform: translateX(0);
+  }
   nav ul {
     flex-direction: column;
     gap: 1rem;
+    padding: 1rem;
   }
   main {
     padding: 1rem;
@@ -219,11 +300,19 @@ footer {
   #map {
     height: 400px;
   }
+  .filter-menu {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 @media (max-width: 480px) {
   .timeline-item, .weapon-item, .accusation-item, .event-item, .call-item {
     padding: 1rem;
+  }
+  .filter-menu button {
+    width: 100%;
+    text-align: center;
   }
 }
 
