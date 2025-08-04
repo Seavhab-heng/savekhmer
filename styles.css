@@ -293,6 +293,10 @@ main {
   z-index: 410; /* Above tile pane (400) but below popup pane (600) */
 }
 
+.leaflet-marker-pane {
+  z-index: 500; /* Ensure markers are above overlay */
+}
+
 footer {
   text-align: center;
   padding: 1rem;
