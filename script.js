@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Current Date and Time
     const currentTime = document.getElementById('current-time');
-    currentTime.textContent = `06:35 +08, 8/5/2025`; // Hardcoded to match system time
+    currentTime.textContent = `06:46 +08, 8/5/2025`; // Hardcoded to match system time
 
     // Heatmap Layer
     let heatLayer;
@@ -155,12 +155,16 @@ document.addEventListener('DOMContentLoaded', () => {
             if (layer instanceof L.Marker) map.removeLayer(layer);
           });
 
-          // Heatmap points
+          // Heatmap points (updated for July 24-29 events)
           const heatPoints = [];
           data.forEach(province => {
             province.events.forEach(event => {
               if (filter === 'all' || event.date === filter) {
-                heatPoints.push([province.coordinates[0], province.coordinates[1], event.intensity]);
+                if (event.date >= '2025-07-24' && event.date <= '2025-07-29') {
+                  heatPoints.push([province.coordinates[0], province.coordinates[1], event.intensity * 1.5]); // Increased intensity for escalation
+                } else {
+                  heatPoints.push([province.coordinates[0], province.coordinates[1], event.intensity]);
+                }
               }
             });
           });
@@ -173,7 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
             gradient: { 0.4: 'yellow', 0.65: 'orange', 1: 'red' }
           }).addTo(map);
 
-          // Add markers and province info
+          // Add markers and province info (updated for July 24-29)
           data.forEach(province => {
             if (province.events.length > 0) {
               const events = province.events.filter(event => filter === 'all' || event.date === filter);
@@ -200,6 +204,17 @@ document.addEventListener('DOMContentLoaded', () => {
               }
             }
           });
+
+          // Add specific marker for July 29 event (Oddar Meanchey)
+          if (filter === 'all' || filter === '2025-07-29') {
+            const oddarMeanchey = [14.15, 103.50]; // Approximate coordinates
+            const marker = L.marker(oddarMeanchey, { title: 'Oddar Meanchey' }).addTo(map);
+            marker.bindPopup(`
+              <h3>Oddar Meanchey</h3>
+              <p>Date: July 29, 2025</p>
+              <p>Description: Thai forces captured unarmed Cambodian troops post-ceasefire.</p>
+            `);
+          }
         }
       })
       .catch(error => console.error('Error loading province metrics:', error));
