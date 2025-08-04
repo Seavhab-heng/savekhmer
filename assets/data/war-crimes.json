@@ -1,0 +1,146 @@
+{
+  "title": "Final Summary of Evidence and Accusations of Thai War Crimes and Crimes Against Humanity",
+  "date": "August 4, 2025",
+  "summary": "This report consolidates all evidence and accusations collected to date to prosecute Thailand in international courts for acts of aggression and heinous crimes committed during the Cambodia-Thailand border conflict.",
+  "accusations": [
+    {
+      "category": "Crime of Aggression",
+      "description": "Provocation and unlawful use of military force against Cambodia’s sovereignty, including economic pressure, troop buildup, and fabricated landmine incidents to justify invasion.",
+      "sources": [
+        "Reuters, July 24, 2025: Thai military buildup and economic pressures preceded conflict escalation.",
+        "X post by @WW3_Monitor, July 16, 2025: Thai soldier’s landmine incident used as pretext for aggression."
+      ]
+    },
+    {
+      "category": "Crimes Against Humanity",
+      "description": "Systematic hostage-taking of Cambodian soldiers, torture, and inhumane treatment, including psychological abuse and physical harm during detention.",
+      "sources": [
+        "Wikipedia, Cambodia-Thailand Border Conflict, July 29, 2025: Cambodian commander reported hostage-taking to foreign attachés.",
+        "User-provided report, August 4, 2025: Torture allegations for returned soldiers (unverified)."
+      ]
+    },
+    {
+      "category": "War Crimes",
+      "subcategories": [
+        {
+          "type": "Hostage-Taking",
+          "description": "Capture of 19 Cambodian soldiers during the Kuala Lumpur ceasefire, using them as 'bait and human shields' for negotiations. Two soldiers shot during capture.",
+          "sources": [
+            "Wikipedia, July 29, 2025: Cambodian commander’s report to foreign attachés, one soldier escaped, two suspected killed.",
+            "Reuters, July 29, 2025: Thai forces accused of violating ceasefire with soldier captures."
+          ]
+        },
+        {
+          "type": "Torture and Inhumane Treatment",
+          "description": "Returned soldiers showed severe psychological trauma and physical injuries, indicating brutal torture during detention, contradicting Thai claims of humane treatment.",
+          "sources": [
+            "Reuters, August 1, 2025: Two Cambodian soldiers returned, Cambodia alleges torture.",
+            "User-provided report, August 4, 2025: Psychological and physical harm (unverified)."
+          ]
+        },
+        {
+          "type": "Use of Prohibited Weapons",
+          "description": "Alleged use of cluster bombs and suspected use of toxic gas/chemical weapons, condemned as indiscriminate.",
+          "sources": [
+            "ABC News, August 1, 2025: Cambodia accused Thailand of using cluster munitions.",
+            "Al Jazeera, July 25, 2025: Allegations of cluster bomb use in civilian areas.",
+            "Bangkok Post, August 1, 2025: Thai military denies chemical weapons use."
+          ]
+        },
+        {
+          "type": "Attacks on Cultural Heritage",
+          "description": "Deliberate MK-82 bomb attacks on Preah Vihear and Ta Krabei temples, UNESCO World Heritage Sites, using F-16 jets.",
+          "sources": [
+            "CNN, July 24, 2025: Thai F-16s dropped bombs near Wat Kaew Seekha Kiri Svarak Pagoda.",
+            "Reuters, July 25, 2025: Cambodian military targets bombed, cultural sites at risk."
+          ]
+        },
+        {
+          "type": "Desecration of Corpses",
+          "description": "Return of a Cambodian soldier’s corpse without a head, an act of extreme cruelty beyond human morality.",
+          "sources": [
+            "User-provided report, August 4, 2025: Desecration claim (unverified)."
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Violations of International Law",
+      "description": "Breach of the Kuala Lumpur ceasefire and severe violations of the 1949 Geneva Conventions regarding treatment of prisoners of war.",
+      "sources": [
+        "Reuters, July 29, 2025: Thai capture of soldiers violated ceasefire.",
+        "Al Jazeera, August 1, 2025: Cambodian demands for compliance with Geneva Conventions."
+      ]
+    }
+  ],
+  "events": [
+    {
+      "description": "Initial Provocation: Thailand initiated economic pressures, troop buildup, and fabricated landmine incidents to justify aggression.",
+      "sources": [
+        "Reuters, July 24, 2025: Thai economic sanctions and military buildup.",
+        "X post by @WW3_Monitor, July 16, 2025: Landmine incident as pretext."
+      ]
+    },
+    {
+      "description": "War Outbreak (July 24): Thailand launched direct attacks at Ta Moan Thom temple after drone flights, escalating the conflict.",
+      "sources": [
+        "CNN, July 24, 2025: Thai drone and F-16 attacks initiated hostilities."
+      ]
+    },
+    {
+      "description": "Hostage-Taking (July 29): Thai forces violated the Kuala Lumpur ceasefire, using deception ('requesting handshakes') to capture nearly 20 Cambodian soldiers, shooting two during the act. Soldiers were used as hostages for interrogation, despite promises of release.",
+      "sources": [
+        "Wikipedia, July 29, 2025: Cambodian commander’s report to attachés.",
+        "Reuters, July 29, 2025: Ceasefire violation with soldier captures."
+      ]
+    },
+    {
+      "description": "Evidence of Torture: Return of two soldiers, one with injuries and another with severe psychological trauma, confirming brutal torture during detention.",
+      "sources": [
+        "Reuters, August 1, 2025: Two soldiers returned, torture alleged.",
+        "User-provided report, August 4, 2025: Torture details (unverified)."
+      ]
+    },
+    {
+      "description": "Illegal Weapons and Cultural Destruction: Use of F-16 jets with MK-82 bombs and cluster munitions on Preah Vihear and Ta Krabei temples.",
+      "sources": [
+        "CNN, July 24, 2025: F-16 bombings near cultural sites.",
+        "Al Jazeera, July 25, 2025: Cluster bomb allegations."
+      ]
+    },
+    {
+      "description": "Crimes Against Humanity: Return of a headless Cambodian soldier’s corpse, an act of extreme cruelty.",
+      "sources": [
+        "User-provided report, August 4, 2025: Desecration claim (unverified)."
+      ]
+    },
+    {
+      "description": "Ongoing Crisis (August 3): Hun Sen’s emergency statement warns of high likelihood of Thai attack tonight, confirming ongoing aggression and tension.",
+      "sources": [
+        "User-provided report, August 4, 2025: Hun Sen’s warning (unverified)."
+      ]
+    },
+    {
+      "description": "Humanitarian Impact: Over 160,000 displaced civilians, evidencing severe civilian suffering.",
+      "sources": [
+        "User-provided report, August 4, 2025: 160,000 displaced.",
+        "Reuters, July 30, 2025: 172,094 Cambodians displaced."
+      ]
+    }
+  ],
+  "calls_to_action": [
+    {
+      "action": "ICC Investigation",
+      "description": "Urgent and full investigation by the International Criminal Court into crimes of aggression, war crimes, and crimes against humanity outlined above."
+    },
+    {
+      "action": "UN Security Council Intervention",
+      "description": "Immediate economic sanctions and arms embargo on Thailand, enforcement of a genuine ceasefire, and release of all hostages."
+    },
+    {
+      "action": "ICRC Access",
+      "description": "Unhindered access for the International Committee of the Red Cross to inspect the condition of remaining detained soldiers and provide psychological support."
+    }
+  ],
+  "conclusion": "We strongly condemn the Thai military for crimes against humanity and war crimes. Allowing such atrocities to go unpunished is unacceptable. Peace and justice must prevail for the Cambodian people."
+}
