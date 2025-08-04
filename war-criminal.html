@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>War Crimes and Crimes Against Humanity</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="map.html">Map</a></li>
+        <li><a href="media.html">Media & Supporters</a></li>
+        <li><a href="weapons.html">Weapons</a></li>
+        <li><a href="war-criminal.html">War Crimes</a></li>
+        <li><a href="donate.html">Donate</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="war-crimes">
+      <h1 id="war-crimes-title"></h1>
+      <p id="war-crimes-date"></p>
+      <h2>Summary</h2>
+      <p id="war-crimes-summary"></p>
+      <h2>Key Accusations</h2>
+      <div id="war-crimes-accusations"></div>
+      <h2>Detailed Events</h2>
+      <div id="war-crimes-events"></div>
+      <h2>Urgent Calls to Action</h2>
+      <div id="war-crimes-calls"></div>
+      <h2>Conclusion</h2>
+      <p id="war-crimes-conclusion"></p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Cambodia-Thailand Conflict Documentary</p>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      fetch('assets/data/war-crimes.json')
+        .then(response => response.json())
+        .then(data => {
+          // Title and Date
+          document.getElementById('war-crimes-title').textContent = data.title;
+          document.getElementById('war-crimes-date').textContent = data.date;
+
+          // Summary
+          document.getElementById('war-crimes-summary').textContent = data.summary;
+
+          // Accusations
+          const accusationsDiv = document.getElementById('war-crimes-accusations');
+          data.accusations.forEach((accusation, index) => {
+            const div = document.createElement('div');
+            div.className = 'accusation-item';
+            div.style.animationDelay = `${index * 0.2}s`;
+            let html = `<h3>${accusation.category}</h3><p>${accusation.description}</p>`;
+            if (accusation.subcategories) {
+              html += '<ul>';
+              accusation.subcategories.forEach(sub => {
+                html += `<li><strong>${sub.type}:</strong> ${sub.description}</li>`;
+              });
+              html += '</ul>';
+            }
+            html += `<h4>Sources</h4><ul>${accusation.sources.length ? accusation.sources.map(s => `<li>${s}</li>`).join('') : '<li>No verified sources available</li>'}</ul>`;
+            div.innerHTML = html;
+            accusationsDiv.appendChild(div);
+          });
+
+          // Events
+          const eventsDiv = document.getElementById('war-crimes-events');
+          data.events.forEach((event, index) => {
+            const div = document.createElement('div');
+            div.className = 'event-item';
+            div.style.animationDelay = `${index * 0.2}s`;
+            div.innerHTML = `<p>${event.description}</p><h4>Sources</h4><ul>${event.sources.length ? event.sources.map(s => `<li>${s}</li>`).join('') : '<li>No verified sources available</li>'}</ul>`;
+            eventsDiv.appendChild(div);
+          });
+
+          // Calls to Action
+          const callsDiv = document.getElementById('war-crimes-calls');
+          data.calls_to_action.forEach((call, index) => {
+            const div = document.createElement('div');
+            div.className = 'call-item';
+            div.style.animationDelay = `${index * 0.2}s`;
+            div.innerHTML = `<h3>${call.action}</h3><p>${call.description}</p>`;
+            callsDiv.appendChild(div);
+          });
+
+          // Conclusion
+          document.getElementById('war-crimes-conclusion').textContent = data.conclusion;
+        });
+    });
+  </script>
+</body>
+</html>
