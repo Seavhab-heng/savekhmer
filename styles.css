@@ -1,4 +1,4 @@
-/* [Previous CSS remains unchanged until map-specific styles] */
+/* [Previous CSS unchanged until map styles] */
 
 #map-section p #current-time {
   font-weight: bold;
@@ -11,13 +11,12 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Ensure overlay is above heatmap but below popups */
 .leaflet-overlay-pane {
-  z-index: 410; /* Above tile pane (400) but below popup pane (600) */
+  z-index: 410; /* Above heatmap (400), below popups (600) */
 }
 
 .leaflet-marker-pane {
-  z-index: 500; /* Ensure markers are above overlay */
+  z-index: 500; /* Above overlay */
 }
 
-/* [Rest of the CSS remains unchanged] */
+/* [Rest of the CSS unchanged] */
