@@ -127,6 +127,26 @@ main {
   outline-offset: 2px;
 }
 
+#overlay-toggle {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+#overlay-toggle:hover {
+  background: #2980b9;
+}
+
+#overlay-toggle:focus {
+  outline: 2px solid #2c3e50;
+  outline-offset: 2px;
+}
+
 .timeline-item, .weapon-item, .accusation-item, .event-item, .call-item {
   background: white;
   padding: 1.5rem;
@@ -318,6 +338,10 @@ footer {
   .filter-menu {
     flex-direction: column;
     align-items: center;
+  }
+  #overlay-toggle {
+    width: 100%;
+    text-align: center;
   }
 }
 
