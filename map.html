@@ -3,70 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interactive Map</title>
+  <meta name="description" content="Interactive map of 2025 Cambodia-Thailand border conflict with heatmap and event markers.">
+  <title>Map | Cambodia-Thailand Border Conflict 2025</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="assets/icons/favicon.ico">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body>
   <header>
-    <nav>
+    <button id="menu-toggle" aria-label="Toggle menu" class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav aria-label="Main navigation" id="main-nav">
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="map.html">Map</a></li>
-        <li><a href="media.html">Media & Supporters</a></li>
+        <li><a href="map.html" aria-current="page">Map</a></li>
+        <li><a href="weapons.html">Weapons</a></li>
+        <li><a href="war-criminal.html">War Crimes</a></li>
         <li><a href="donate.html">Donate</a></li>
       </ul>
     </nav>
   </header>
   <main>
-    <section id="map-section">
-      <h1>Cambodia Conflict Map</h1>
-      <div id="map" style="height: 500px;"></div>
-      <div id="province-info"></div>
+    <section id="map-section" aria-labelledby="map-heading">
+      <h1 id="map-heading">Conflict Map: Cambodia-Thailand Border (2025)</h1>
+      <p>Interactive map showing conflict zones and events, with heatmap indicating intensity.</p>
+      <div id="filter-menu" class="filter-menu" role="menu">
+        <button role="menuitem" data-filter="all" class="active">All Events</button>
+        <button role="menuitem" data-filter="2025-05-28">May 28, 2025</button>
+        <button role="menuitem" data-filter="2025-07-24">July 24, 2025</button>
+        <button role="menuitem" data-filter="2025-07-26">July 26, 2025</button>
+        <button role="menuitem" data-filter="2025-08-04">August 4, 2025</button>
+      </div>
+      <div id="map" aria-label="Interactive conflict map"></div>
+      <div id="province-info" class="bento-grid"></div>
     </section>
   </main>
   <footer>
-    <p>&copy; 2025 Thailand-Cambodia Conflict Documentary</p>
+    <p>&copy; 2025 Cambodia-Thailand Conflict Documentary</p>
   </footer>
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>
-  <script>
-    const map = L.map('map').setView([12.5657, 104.9910], 7);
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      attribution: '&copy; OpenStreetMap contributors'
-    }).addTo(map);
-
-    // Sample province data (replace with real GeoJSON)
-    const provinceData = {
-      "Oddar Meanchey": {
-        coords: [14.1812, 103.5176],
-        media: ["Image: Clash at Ta Moan Thom", "Article: NYT Report"],
-        intensity: 0.8
-      },
-      "Surin": {
-        coords: [14.8818, 103.4936],
-        media: ["Video: Shelling Footage", "Article: BBC Verify"],
-        intensity: 0.6
-      }
-    };
-
-    // Heatmap
-    const heatPoints = Object.entries(provinceData).map(([name, data]) => [
-      data.coords[0], data.coords[1], data.intensity
-    ]);
-    L.heatLayer(heatPoints, { radius: 25 }).addTo(map);
-
-    // Province click events
-    Object.entries(provinceData).forEach(([name, data]) => {
-      L.marker(data.coords).addTo(map)
-        .bindPopup(`<b>${name}</b><br>${data.media.join('<br>')}`)
-        .on('click', () => {
-          document.getElementById('province-info').innerHTML = `
-            <h2>${name}</h2>
-            <ul>${data.media.map(m => `<li>${m}</li>`).join('')}</ul>
-          `;
-        });
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
