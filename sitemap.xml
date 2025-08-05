@@ -30,4 +30,6 @@
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
-</urlset>
+  <url>
+    <loc>https://justices.cam/blog/index.html</loc>
+    <lastmod>
