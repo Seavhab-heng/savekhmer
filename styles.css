@@ -404,3 +404,92 @@ footer {
 }
 
 /* [Rest of the CSS remains unchanged] */
+/* [Previous CSS remains unchanged until new styles] */
+
+#blog #timeframe-generator {
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+#blog #timeframe-generator label {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#blog #timeframe-generator input,
+#blog #timeframe-generator button {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#blog #timeframe-generator button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#blog #timeframe-generator button:hover {
+  background-color: #2980b9;
+}
+
+.article-item {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(20px);
+  opacity: 0;
+  animation: slideIn 0.5s forwards;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.article-item.hovered {
+  transform: scale(1.02);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.article-item h3 {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.article-item p {
+  margin-bottom: 0.5rem;
+  color: #666;
+}
+
+.article-item .read-more {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.article-item .read-more:hover {
+  background: #2980b9;
+}
+
+#full-article {
+  margin-top: 1rem;
+}
+
+#full-article h2 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+#full-article p {
+  color: #333;
+  line-height: 1.6;
+}
+
+/* [Rest of the CSS remains unchanged] */
