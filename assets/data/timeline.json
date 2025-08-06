@@ -1,36 +1,174 @@
 [
-  {"date": "2025-08-05", "event": "GBC Secretariat, led by Major General Sin Sokha, met in Kuala Lumpur to strengthen ceasefire credibility ahead of August 7 meeting."},
-  {"date": "2025-08-05", "event": "Thai forces used excavators and dug trenches in An Ses, prompting Cambodia to demand withdrawal, with discussions ongoing."},
-  {"date": "2025-08-05", "event": "Thai-installed barbed wire in An Ses was removed by 5:30 PM after negotiations, though tensions persist."},
-  {"date": "2025-08-04 11:00", "event": "Thai armed forces, with excavators, enter An Ses in Cambodian territory, laying barbed wire despite objections, violating July 28 ceasefire. Cambodia requests ICRC mediation for captured soldiers."},
-  {"date": "2025-08-04 00:01", "event": "Cambodia reports calm at frontline but maintains high alertness, reaffirming commitment to July 28 ceasefire and urging reliance on official sources."},
-  {"date": "2025-08-04", "event": "King Norodom Sihamoni authorizes Hun Sen to lead national defense coordination, granting full use of RCAF, including palace guards, akin to martial law."},
-  {"date": "2025-08-04", "event": "Thai media reports Royal Thai Army spokesperson denies Cambodia’s claims of An Ses incursion, asserting Thailand’s commitment to ceasefire."},
-  {"date": "2025-08-04", "event": "Thai forces entered An Ses with excavators and laid barbed wire, violating ceasefire, despite Cambodia’s sovereignty claims."},
-  {"date": "2025-08-03 10:49", "event": "Cambodia reports Thai military plans to launch attacks from Ta Moan Thom, Ta Krabey, Preah Vihear, and An Ses, violating July 28 ceasefire. Thailand initially rejects Cambodia’s proposal for Malaysia, U.S., and China to observe GBC meeting."},
-  {"date": "2025-08-03", "event": "Thailand’s Acting Minister of National Defense accepts Cambodia’s proposal for Malaysia, U.S., and China to observe GBC meeting, reversing earlier rejection."},
-  {"date": "2025-08-03", "event": "ASEAN Military Observer Group, led by Malaysia’s Colonel Nazlee Bin Abdul Rahim, departed Phnom Penh to monitor ceasefire in Oddar Meanchey and Preah Vihear for two weeks."},
-  {"date": "2025-08-03", "event": "Cambodia notified Thailand of ASEAN Observer Team’s visit to Oddar Meanchey and Preah Vihear from August 3 to monitor ceasefire implementation."},
-  {"date": "2025-08-03", "event": "Cambodia reported Thai military plans to attack from Tamone Thom to Anseh, breaching July 28 ceasefire, prompting international appeals."},
-  {"date": "2025-08-03", "event": "Cambodia-Thailand GBC Secretariat delegation arrived in Malaysia for meetings from August 4-7 to enhance ceasefire efforts."},
-  {"date": "2025-08-02", "event": "Thai media reports Cambodian drones flying into Thai territory, which Cambodia rejects as false, accusing Thailand of misinformation."},
-  {"date": "2025-08-01", "event": "Thailand returns two of 20 captured Cambodian soldiers, who Cambodia claims were tortured. Thailand asserts humane treatment."},
-  {"date": "2025-07-30 17:45", "event": "172,094 Cambodians displaced: Siem Reap (61,907), Oddar Meanchey (39,546), Banteay Meanchey (35,057), Preah Vihear (32,558), Pursat (3,026)."},
-  {"date": "2025-07-29", "event": "Thai forces capture 20 Cambodian soldiers near Oddar Meanchey, allegedly violating ceasefire. Cambodia denies Thai accusations."},
-  {"date": "2025-07-29", "event": "Ceasefire signed to halt conflict, but Thai forces captured 20 unarmed Cambodian troops near Oddar Meanchey, displacing 39,546 more."},
-  {"date": "2025-07-28 00:00", "event": "Ceasefire agreed in Malaysia, mediated by Anwar Ibrahim and Trump."},
-  {"date": "2025-07-25", "event": "Fighting spreads to six areas; over 100,000 displaced across Cambodia and Thailand."},
-  {"date": "2025-07-24 08:47", "event": "Cambodian forces retaliate in self-defense against Thai aggression."},
-  {"date": "2025-07-24 08:46", "event": "Thai Second Army Region blocks access to Ta Moan Thom temple. Thai forces fire on Cambodian troops, extending to Ta Krabei, Phnom Kmoach, and Mom Bei, using jet fighters."},
-  {"date": "2025-07-24 08:30", "event": "Thailand fires into the sky, escalating tensions."},
-  {"date": "2025-07-24 07:04", "event": "Thailand hovers drone(s) for 2 minutes near Ta Moan Thom temple."},
-  {"date": "2025-07-24 06:30", "event": "Thailand violates bilateral agreements by installing barbed wire at Ta Moan Thom temple."},
-  {"date": "2025-07-24", "event": "Thai F-16 jets dropped MK-82 bombs near Preah Vihear Temple, escalating conflict and displacing over 32,558 people."},
-  {"date": "2025-07-23", "event": "Second landmine explosion in disputed area. Thailand expels Cambodian ambassador and recalls their own."},
-  {"date": "2025-07-16", "event": "Thai soldier steps on war-era landmine in disputed area, accuses Cambodia of laying new mines."},
-  {"date": "2025-07-01", "event": "Thai PM suspended, demonstrating internal political instability."},
-  {"date": "2025-06-22", "event": "Cambodia attempts peaceful negotiations, met with Thai refusal and non-cooperation."},
-  {"date": "2025-06-19", "event": "Leaked phone call from Thai PM to Hun Sen sparks outrage; Thai politics destabilized. Cambodia halts Thai imports."},
-  {"date": "2025-06-15", "event": "Cambodia submits ICJ application, seeking legal solution to border dispute."},
-  {"date": "2025-05-28", "event": "Cambodian soldier killed during brief firefight in Preah Vihear."}
+    {
+        "date": "2025-08-06 21:00",
+        "event": "Samdech Techo Hun Sen, President of the Senate, released a statement to clarify two issues. He dismissed rumors of an assassination plot by Thai leaders against him and Prime Minister Hun Manet. He also urged that other countries not be dragged into the conflict over reports of them providing drones and weapons to either side, stressing that countries selling fighter jets to Thailand should tighten usage contracts to prevent attacks on Cambodia or neighboring countries."
+    },
+    {
+        "date": "2025-08-06 17:00",
+        "event": "Lieutenant General Maly Socheata, spokesperson for the Cambodian Ministry of National Defence, held a press conference to firmly reject Thai media reports claiming a Cambodian spy had been arrested. She denounced the reports as 'baseless fabrications' and stated that the individual could not be a Cambodian soldier as the Royal Cambodian Armed Forces (RCAF) has a policy prohibiting the recruitment of individuals with tattoos, which the suspect had."
+    },
+    {
+        "date": "2025-08-06",
+        "event": "The Embassy of the Republic of Korea in Cambodia issued a statement denying reports that it was selling Korean-made guided missiles and light attack aircraft to Thailand. The embassy welcomed the ceasefire agreement and expressed its expectation that all parties would implement it to resolve the conflict peacefully."
+    },
+    {
+        "date": "2025-08-06",
+        "event": "The Japanese Embassy in Cambodia issued a statement rejecting 'fake news' that Japan would provide combat drones to Thailand. The embassy confirmed that Japan has no such plans, has not received a request, and that its aid is limited to non-conflict areas. The statement also referenced the Japanese Ambassador's visit to the battlefield on July 30 and August 1, and reiterated Japan's commitment to supporting the ceasefire and restoring peace."
+    },
+    {
+        "date": "2025-08-06",
+        "event": "The Cambodian Ministry of Labour and Vocational Training (MLVT) rejected a Thai official's claim that returning Cambodian migrant workers were being threatened with citizenship revocation. The MLVT stated that an estimated 800,000 workers returned due to violence from Thai extremist groups, lack of protection, and military incursions. In response, the Cambodian government launched a reintegration campaign offering job placement services and free vocational training to returnees, with over 550,000 jobs available."
+    },
+    {
+        "date": "2025-08-06",
+        "event": "A delegation of diplomatic missions from 11 countries and 15 UN agencies inspected refugee camps at Wat Bat Thkau and Wat Thmor Komaor in Oddar Meanchey, and Wat Chroy Neangngoun in Siem Reap. During this visit, a European Union representative also met with the displaced people. As of this date, Wat Bat Thkau housed 14,042 people and Wat Chroy Neangngoun housed 3,898 people. The inspection was led by Secretaries of State Mr. Kan Pharidh and Mr. Oun Kheang."
+    },
+    {
+        "date": "2025-08-06",
+        "event": "General Tea Seiha announced that the three-day GBC Secretariat meeting between Cambodia and Thailand was positive, with both sides accepting inputs from the other. The Malaysian Armed Forces Chief met with Tea Seiha and encouraged the creation of a Terms of Reference (TOR) for the ASEAN Monitoring Team (AMT), a key mechanism for monitoring the ceasefire."
+    },
+    {
+        "date": "2025-08-06",
+        "event": "General Tea Seiha, Cambodia's Deputy Prime Minister and Minister of National Defense, met with USINDOPACOM Commander Admiral Samuel Paparo and U.S. Ambassador to Malaysia Edgard Kagan. The U.S. affirmed support for the ceasefire and offered logistical and technical assistance, including military planning and aerial surveillance, to help establish the ASEAN Monitoring Team (AMT) quickly."
+    },
+    {
+        "date": "2025-08-05 17:30",
+        "event": "The Cambodian Ministry of National Defense spokesperson confirmed that the barbed wire installed by the Thai side in An Ses area has been removed, and the machinery has ceased operations as of 5:30 PM on August 5, following negotiations. The area is within Cambodian territory and is controlled by the Cambodian armed forces."
+    },
+    {
+        "date": "2025-08-05 09:09",
+        "event": "According to the Cambodian Ministry of National Defense, Thai forces resumed provocative actions in the An Ses area. At 9:09 AM, Thai machinery continued to clear land. At 9:50 AM, a vehicle unloaded concrete trench blocks, wheels and logs. At 9:53 AM, forces continued digging trenches, and at 10:55 AM, another machine cleared land 15 meters from Cambodian positions while placing more materials into the trench. This activity was deemed a violation of the ceasefire, with Cambodian forces initiating contact with the Thai side to request a withdrawal. As of this report, no withdrawal had occurred, and both sides were in discussions."
+    },
+    {
+        "date": "2025-08-05",
+        "event": "GBC Secretariat, led by Major General Sin Sokha, met in Kuala Lumpur to strengthen ceasefire credibility ahead of August 7 meeting."
+    },
+    {
+        "date": "2025-08-04 18:30",
+        "event": "The Ministry of National Defense reports an updated total of 124,940 displaced civilians: Oddar Meanchey Province 34,027, Preah Vihear Province 42,016, Banteay Meanchey Province 8,505, Pursat Province 906, and Siem Reap Province 39,486."
+    },
+    {
+        "date": "2025-08-04 11:00",
+        "event": "Thai armed forces, accompanied by an excavator, moved into Cambodia's An Ses area and installed barbed wire despite strong objections from Cambodian forces. The Cambodian army contacted the Thai army to request the immediate removal of the barbed wire and machinery, but as of August 5, the removal had not yet happened, and both sides were in discussions."
+    },
+    {
+        "date": "2025-08-04 00:01",
+        "event": "Cambodia reports calm at frontline but maintains high alertness, reaffirming commitment to July 28 ceasefire and urging reliance on official sources."
+    },
+    {
+        "date": "2025-08-04",
+        "event": "King Norodom Sihamoni authorizes Hun Sen to lead national defense coordination, granting full use of RCAF, including palace guards, akin to martial law."
+    },
+    {
+        "date": "2025-08-04",
+        "event": "Thai media reports Royal Thai Army spokesperson denies Cambodia’s claims of An Ses incursion, asserting Thailand’s commitment to ceasefire."
+    },
+    {
+        "date": "2025-08-04",
+        "event": "Thai forces entered An Ses with excavators and laid barbed wire, violating ceasefire, despite Cambodia’s sovereignty claims."
+    },
+    {
+        "date": "2025-08-03 10:49",
+        "event": "Cambodia reports Thai military plans to launch attacks from Ta Moan Thom, Ta Krabey, Preah Vihear, and An Ses, violating July 28 ceasefire. Thailand initially rejects Cambodia’s proposal for Malaysia, U.S., and China to observe GBC meeting."
+    },
+    {
+        "date": "2025-08-03",
+        "event": "Thailand’s Acting Minister of National Defense accepts Cambodia’s proposal for Malaysia, U.S., and China to observe GBC meeting, reversing earlier rejection."
+    },
+    {
+        "date": "2025-08-03",
+        "event": "ASEAN Military Observer Group, led by Malaysia’s Colonel Nazlee Bin Abdul Rahim, departed Phnom Penh to monitor ceasefire in Oddar Meanchey and Preah Vihear for two weeks."
+    },
+    {
+        "date": "2025-08-03",
+        "event": "Cambodia notified Thailand of ASEAN Observer Team’s visit to Oddar Meanchey and Preah Vihear from August 3 to monitor ceasefire implementation."
+    },
+    {
+        "date": "2025-08-03",
+        "event": "Cambodia reported Thai military plans to attack from Tamone Thom to Anseh, breaching July 28 ceasefire, prompting international appeals."
+    },
+    {
+        "date": "2025-08-03",
+        "event": "Cambodia-Thailand GBC Secretariat delegation arrived in Malaysia for meetings from August 4-7 to enhance ceasefire efforts."
+    },
+    {
+        "date": "2025-08-02",
+        "event": "Thai media reports Cambodian drones flying into Thai territory, which Cambodia rejects as false, accusing Thailand of misinformation."
+    },
+    {
+        "date": "2025-08-01",
+        "event": "Thailand returns two of 20 captured Cambodian soldiers, who Cambodia claims were tortured. Thailand asserts humane treatment."
+    },
+    {
+        "date": "2025-07-30 17:45",
+        "event": "172,094 Cambodians displaced: Siem Reap (61,907), Oddar Meanchey (39,546), Banteay Meanchey (35,057), Preah Vihear (32,558), Pursat (3,026)."
+    },
+    {
+        "date": "2025-07-29",
+        "event": "Thai forces capture 20 Cambodian soldiers near Oddar Meanchey, allegedly violating ceasefire. Cambodia denies Thai accusations."
+    },
+    {
+        "date": "2025-07-29",
+        "event": "Ceasefire signed to halt conflict, but Thai forces captured 20 unarmed Cambodian troops near Oddar Meanchey, displacing 39,546 more."
+    },
+    {
+        "date": "2025-07-28 00:00",
+        "event": "Ceasefire agreed in Malaysia, mediated by Anwar Ibrahim and Trump."
+    },
+    {
+        "date": "2025-07-25",
+        "event": "Fighting spreads to six areas; over 100,000 displaced across Cambodia and Thailand."
+    },
+    {
+        "date": "2025-07-24 08:47",
+        "event": "Cambodian forces retaliate in self-defense against Thai aggression."
+    },
+        {
+        "date": "2025-07-24 08:46",
+        "event": "Thai Second Army Region blocks access to Ta Moan Thom temple. Thai forces fire on Cambodian troops, extending to Ta Krabei, Phnom Kmoach, and Mom Bei, using jet fighters."
+    },
+    {
+        "date": "2025-07-24 08:30",
+        "event": "Thailand fires into the sky, escalating tensions."
+    },
+    {
+        "date": "2025-07-24 07:04",
+        "event": "Thailand hovers drone(s) for 2 minutes near Ta Moan Thom temple."
+    },
+    {
+        "date": "2025-07-24 06:30",
+        "event": "Thailand violates bilateral agreements by installing barbed wire at Ta Moan Thom temple."
+    },
+    {
+        "date": "2025-07-24",
+        "event": "Thai F-16 jets dropped MK-82 bombs near Preah Vihear Temple, escalating conflict and displacing over 32,558 people."
+    },
+    {
+        "date": "2025-07-23",
+        "event": "Second landmine explosion in disputed area. Thailand expels Cambodian ambassador and recalls their own."
+    },
+    {
+        "date": "2025-07-16",
+        "event": "Thai soldier steps on war-era landmine in disputed area, accuses Cambodia of laying new mines."
+    },
+    {
+        "date": "2025-07-01",
+        "event": "Thai PM suspended, demonstrating internal political instability."
+    },
+    {
+        "date": "2025-06-22",
+        "event": "Cambodia attempts peaceful negotiations, met with Thai refusal and non-cooperation."
+    },
+    {
+        "date": "2025-06-19",
+        "event": "Leaked phone call from Thai PM to Hun Sen sparks outrage; Thai politics destabilized. Cambodia halts Thai imports."
+    },
+    {
+        "date": "2025-06-15",
+        "event": "Cambodia submits ICJ application, seeking legal solution to border dispute."
+    },
+    {
+        "date": "2025-05-28",
+        "event": "Cambodian soldier killed during brief firefight in Preah Vihear."
+    }
 ]
